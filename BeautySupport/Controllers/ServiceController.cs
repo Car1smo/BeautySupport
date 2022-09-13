@@ -4,24 +4,20 @@ using System.Diagnostics;
 
 namespace BeautySupport.Controllers
 {
-    public class HomeController : Controller
+    public class ServiceController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<ServiceController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public ServiceController(ILogger<ServiceController> logger)
         {
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult List()
         {
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
